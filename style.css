@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Baskervville+SC:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight:wght@400;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  font-family: "Goudy Bookletter 1911", serif;
+}
+
+body {
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: linear-gradient(
+    -45deg,
+    #d4d65a,
+    #6108d6,
+    #000000,
+    #ad8f06,
+    #e06c00
+  );
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  font-family: "goudy-bookletter-1911-regular" serif;
+  color: rgb(253, 253, 253);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.navbar {
+  display: contents;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 40px;
+border-style: none;
+
+  background-color: rgb(218, 238, 43);
+  background: linear-gradient(
+    -50deg rgb(131, 30, 131) rgb(236, 221, 221) rgba(0, 0, 255, 0.692) rgb(119, 216, 119)
+  );
+  box-shadow: 0 2px 4px rgba(170, 45, 45, 0.05);
+}
+
+.logo {
+  font-family: "Bowlby One SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(0, 0, 0);
+}
+
+nav ul {
+  display: flexbox;
+  flex-wrap: wrap;
+  border-radius: 100%;
+  list-style: circle;
+}
+
+
+
+
+nav a {
+  text-decoration: underline;
+  text-shadow: #000;
+  color: #000000;
+  font-family: "Bruno Ace SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+nav a:hover {
+  color: #000;
+  text-shadow: #000000;
+}
+@media(max-width: 600px){
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+  justify-content: center;
+  height: 100vh;
+}
+}
+.profile img {
+  width:200px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.intro {
+  z-index: 1;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
+  text-align: center;
+  
+}
+
+.intro h1 {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #6550c2;
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+.intro img{
+  height: 50px;
+  margin: auto;
+  align-items: center;
+  justify-items: center;
+}
+
+.intro h2 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #6f479c;
+  font-family: "Baskervville SC", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  text-decoration: underline;
+}
+
+.intro p {
+  line-height: 2;
+  font-size: 1rem;
+  color: #9562be;
+  margin: 0 auto;
+  font-family: "Zilla Slab Highlight", serif;
+  font-weight: 900;
+  width: 80%;
+  text-align: center;
+}
+
+
+.zilla-slab-highlight-regular {
+  font-family: "Zilla Slab Highlight", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tags {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  gap: 2px;
+}
+.tags img{
+  width: 80px;
+  height: 50px;
+  margin: 5px;
+  object-fit: contain;
+
+}
+
+.tag {
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.tag:hover {
+  transform: scale(1.05);
+}
+
+.whatsapp {
+  background-color: #0ee668;
+}
+
+.facebook {
+  background-color: #2545f9;
+}
+
+.X {
+  background-color: #000000;
+}
+
+.instagram {
+  background-color: #910bb3;
+}
+.Phone {
+  background-color: #939c45;
+}
+
+.Email {
+  background-color: darkred;
+}
