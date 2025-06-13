@@ -7,13 +7,11 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
-
-
-@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -25,6 +23,8 @@ body {
   color: #000000;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
   height: 100vh;
   background: linear-gradient(
     -45deg,
@@ -41,6 +41,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  z-index: 1;
 }
 
 @keyframes gradientBG {
@@ -54,67 +55,58 @@ body {
     background-position: 0% 50%;
   }
 }
-.navbar {
-  display: contents;
+navbar {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 20px 40px;
-border-style: none;
-
-  background-color: rgb(218, 238, 43);
-  background: linear-gradient(
-    -50deg rgb(131, 30, 131) rgb(236, 221, 221) rgba(0, 0, 255, 0.692) rgb(119, 216, 119)
-  );
-  box-shadow: 0 2px 4px rgba(170, 45, 45, 0.05);
+  justify-content: space-between;
+  padding: 15px 30px;
+flex-wrap: wrap;
 }
 
 .logo {
   font-family: "Bowlby One SC", sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-size: 1.5em;
+  font-weight: bold;
   color: rgb(0, 0, 0);
+  padding: 80px;
+  position: relative;
+  z-index: 2;
 }
 
 nav ul {
-  display: flexbox;
+  display: flex;
   flex-wrap: wrap;
-  border-radius: 100%;
-  list-style: circle;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-size: 0%;
 }
-
-
-
 
 nav a {
   text-decoration: underline;
   text-shadow: #000;
   color: #000000;
   font-family: "Bruno Ace SC", sans-serif;
-  font-weight: 400;
+  font-size: large;
   font-style: normal;
+  
 }
 
 nav a:hover {
   color: #000;
   text-shadow: #000000;
 }
-@media(max-width: 600px){
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 60px 20px;
-  justify-content: center;
-  height: 100vh;
-}
-}
+
+
 .profile img {
-  width:200px;
+  width: 300px;
   height: auto;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  display: block;
   margin-bottom: 30px;
 }
 
@@ -125,7 +117,6 @@ nav a:hover {
   background: rgba(0, 0, 0, 0.3);
   border-radius: 16px;
   text-align: center;
-  
 }
 
 .intro h1 {
@@ -136,7 +127,7 @@ nav a:hover {
   font-weight: 900;
   font-style: normal;
 }
-.intro img{
+.intro img {
   height: 50px;
   margin: auto;
   align-items: center;
@@ -164,7 +155,6 @@ nav a:hover {
   text-align: center;
 }
 
-
 .zilla-slab-highlight-regular {
   font-family: "Zilla Slab Highlight", serif;
   font-weight: 400;
@@ -179,12 +169,13 @@ nav a:hover {
   flex-wrap: wrap;
   gap: 2px;
 }
-.tags img{
-  width: 80px;
+.tags img {
+  width: 100%;
+  max-width: 600px;
   height: 50px;
-  margin: 5px;
+  max-height: 700px;
+  gap: 40%;
   object-fit: contain;
-
 }
 
 .tag {
@@ -222,4 +213,38 @@ nav a:hover {
 
 .Email {
   background-color: darkred;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  
+  }
+
+  .nav a{
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+
+  }
+
+  .logo{
+    margin-bottom: 10px;
+  }
+
+  .profile img{
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+  }
+
+  .intro{
+    text-align: center;
+    padding: 10px;
+  }
 }
